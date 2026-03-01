@@ -1,4 +1,4 @@
-package com.streamliners.timify.other.ext
+package com.streamliners.lipu.other.ext
 
 import java.text.SimpleDateFormat
 import java.util.Locale

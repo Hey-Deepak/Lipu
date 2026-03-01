@@ -1,10 +1,10 @@
-package com.streamliners.timify.feature.chat.comp
+package com.streamliners.lipu.feature.chat.comp
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.streamliners.timify.feature.chat.ChatViewModel
+import com.streamliners.lipu.feature.chat.ChatViewModel
 
 @Composable
 fun VoiceMode(

@@ -1,21 +1,18 @@
 package com.streamliners.lipu.feature.chat
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Insights
-import androidx.compose.material.icons.filled.TableChart
+import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
@@ -27,16 +24,12 @@ import androidx.navigation.NavController
 import com.streamliners.base.ext.showFailureMessage
 import com.streamliners.base.taskState.comp.whenLoaded
 import com.streamliners.compose.android.comp.appBar.TitleBarScaffold
-import com.streamliners.compose.comp.select.Layout
-import com.streamliners.compose.comp.select.RadioGroup
-import com.streamliners.timify.feature.chat.ChatViewModel
-import com.streamliners.timify.feature.chat.ChatViewModel.Mode.Text
-import com.streamliners.timify.feature.chat.comp.MessagesList
-import com.streamliners.timify.feature.chat.comp.TextInput
-import com.streamliners.timify.feature.chat.comp.VoiceMode
-import com.streamliners.timify.feature.chat.viewModelExt.ENABLE_INSIGHTS_CHAT
-import com.streamliners.timify.feature.voice.SpeechRecognitionButton
-import com.streamliners.timify.ui.main.Screen
+import com.streamliners.lipu.feature.chat.ChatViewModel.Mode.Text
+import com.streamliners.lipu.feature.chat.comp.MessagesList
+import com.streamliners.lipu.feature.chat.comp.TextInput
+import com.streamliners.lipu.feature.chat.comp.VoiceMode
+import com.streamliners.lipu.feature.voice.SpeechRecognitionButton
+import com.streamliners.lipu.ui.main.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,28 +44,22 @@ fun ChatScreen(
     }
 
     TitleBarScaffold(
-        title = "LiPu",
+        title = "Lipu - Learn In Public",
         actions = {
             IconButton(
                 onClick = {
-                    viewModel.saveTaskInfoToLocal {
-                        navController.navigate(Screen.SheetSync.route)
-                    }
+                    navController.navigate(Screen.Projects.route)
                 }
             ) {
-                Icon(imageVector = Icons.Default.TableChart, contentDescription = "Sheet Sync")
+                Icon(imageVector = Icons.Default.WorkspacePremium, contentDescription = "Projects")
             }
 
             IconButton(
                 onClick = {
-                    viewModel.saveTaskInfoToLocal {
-                        viewModel.isNewChatHappened.value = false
-                        navController.navigate(Screen.PieChart.route)
-                    }
-
+                    navController.navigate(Screen.ContentHistory.route)
                 }
             ) {
-                Icon(imageVector = Icons.Default.Insights, contentDescription = "Insights")
+                Icon(imageVector = Icons.Default.History, contentDescription = "Content History")
             }
         }
     ) { innerPadding ->
@@ -83,27 +70,6 @@ fun ChatScreen(
                 .padding(innerPadding)
                 .imePadding()
         ) {
-
-            if (ENABLE_INSIGHTS_CHAT) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.primaryContainer)
-                        .padding(vertical = 8.dp, horizontal = 12.dp),
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    RadioGroup(
-                        selection = viewModel.type.value,
-                        onSelectionChange = {
-                            viewModel.type.value = it
-                            viewModel.loadChat()
-                        },
-                        options = ChatViewModel.ChatType.entries.toList(),
-                        labelExtractor = { it.name },
-                        layout = Layout.Row
-                    )
-                }
-            }
 
             Column(
                 modifier = Modifier

@@ -1,4 +1,4 @@
-package com.streamliners.timify.feature.voice
+package com.streamliners.lipu.feature.voice
 
 import android.app.Activity
 import android.content.Intent

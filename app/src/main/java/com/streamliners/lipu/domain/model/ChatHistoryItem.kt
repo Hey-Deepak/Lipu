@@ -1,4 +1,4 @@
-package com.streamliners.timify.domain.model
+package com.streamliners.lipu.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

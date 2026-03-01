@@ -1,4 +1,4 @@
-package com.streamliners.timify.other.ext
+package com.streamliners.lipu.other.ext
 
 import com.google.ai.client.generativeai.Chat
 import com.google.ai.client.generativeai.type.Content

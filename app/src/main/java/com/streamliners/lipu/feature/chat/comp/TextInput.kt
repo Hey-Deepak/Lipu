@@ -1,4 +1,4 @@
-package com.streamliners.timify.feature.chat.comp
+package com.streamliners.lipu.feature.chat.comp
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -13,7 +13,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.streamliners.timify.feature.chat.ChatViewModel
+import com.streamliners.lipu.feature.chat.ChatViewModel
 
 @Composable
 fun TextInput(
@@ -29,7 +29,7 @@ fun TextInput(
                 .weight(1f)
                 .align(Alignment.CenterVertically),
             value = prompt.value,
-            label = { Text("Type something") },
+            label = { Text("What did you learn today?") },
             onValueChange = { prompt.value = it }
         )
 

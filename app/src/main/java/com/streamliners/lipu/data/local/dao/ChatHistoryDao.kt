@@ -1,9 +1,9 @@
-package com.streamliners.timify.data.local.dao
+package com.streamliners.lipu.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.streamliners.timify.domain.model.ChatHistoryItem
+import com.streamliners.lipu.domain.model.ChatHistoryItem
 import kotlinx.coroutines.flow.Flow
 
 @Dao

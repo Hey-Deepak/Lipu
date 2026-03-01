@@ -1,9 +1,9 @@
-package com.streamliners.timify.feature.chat.viewModelExt
+package com.streamliners.lipu.feature.chat.viewModelExt
 
 import com.google.ai.client.generativeai.type.Content
 import com.google.ai.client.generativeai.type.content
-import com.streamliners.timify.domain.model.ChatHistoryItem
-import com.streamliners.timify.feature.chat.ChatViewModel
+import com.streamliners.lipu.domain.model.ChatHistoryItem
+import com.streamliners.lipu.feature.chat.ChatViewModel
 import com.streamliners.utils.DateTimeUtils
 
 fun List<ChatHistoryItem>.toContentList(): MutableList<Content> {

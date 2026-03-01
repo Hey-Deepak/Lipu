@@ -1,4 +1,4 @@
-package com.streamliners.timify.android.helper
+package com.streamliners.lipu.android.helper
 
 import com.google.gson.Gson
 import com.google.gson.JsonElement

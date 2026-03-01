@@ -1,4 +1,4 @@
-package com.streamliners.timify.android.helper
+package com.streamliners.lipu.android.helper
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -17,7 +17,7 @@ class DataStoreUtil(
     companion object {
         fun create(context: Context): DataStoreUtil {
             val datastore = PreferenceDataStoreFactory.create {
-                File(context.filesDir, "datastore/timifyApp.preferences_pb")
+                File(context.filesDir, "datastore/lipuApp.preferences_pb")
             }
             return DataStoreUtil(
                 datastore

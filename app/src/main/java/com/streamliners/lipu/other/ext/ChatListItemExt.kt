@@ -1,6 +1,6 @@
-package com.streamliners.timify.other.ext
+package com.streamliners.lipu.other.ext
 
-import com.streamliners.timify.feature.chat.ChatViewModel
+import com.streamliners.lipu.feature.chat.ChatViewModel
 
 fun ChatViewModel.ChatHistoryUIItem.message(): String {
     return content.asString()

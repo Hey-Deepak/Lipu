@@ -1,11 +1,11 @@
 package com.streamliners.lipu.di
 
 import android.app.Application
-import com.streamliners.timify.android.helper.DataStoreUtil
-import com.streamliners.timify.android.helper.TTSHelper
+import com.streamliners.lipu.android.helper.DataStoreUtil
+import com.streamliners.lipu.android.helper.TTSHelper
 import com.streamliners.lipu.data.local.LocalDB
 import com.streamliners.lipu.data.local.LocalRepo
-import com.streamliners.timify.feature.chat.ChatViewModel
+import com.streamliners.lipu.feature.chat.ChatViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import org.koin.android.ext.koin.androidApplication
@@ -36,13 +36,12 @@ private val appModule = module {
         get<LocalDB>().chatHistoryDao()
     }
     single {
-        get<LocalDB>().taskInfoDao()
+        get<LocalDB>().learningEntryDao()
     }
     single {
-        get<LocalDB>().customAttributeDao()
+        get<LocalDB>().projectDao()
     }
     single { TTSHelper(androidApplication()) }
-    single { HttpClient(CIO) { expectSuccess = true } }
     single { DataStoreUtil.create(androidApplication()) }
     single { LocalRepo(get()) }
 }

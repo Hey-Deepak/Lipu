@@ -12,15 +12,10 @@ import com.streamliners.base.BaseActivity
 import com.streamliners.base.uiEvent.UiEventDialogs
 import com.streamliners.lipu.BuildConfig
 import com.streamliners.lipu.ui.theme.LipuTheme
-import com.streamliners.lipu.data.local.dao.TaskInfoDao
-import com.streamliners.timify.ui.main.NavHostGraph
-import org.koin.android.ext.android.inject
 
-class MainActivity : BaseActivity()  {
+class MainActivity : BaseActivity() {
 
     override var buildType: String = BuildConfig.BUILD_TYPE
-
-    val taskInfoDao by inject<TaskInfoDao>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

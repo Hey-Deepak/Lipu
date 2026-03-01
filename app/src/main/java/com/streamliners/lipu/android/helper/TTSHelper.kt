@@ -1,4 +1,4 @@
-package com.streamliners.timify.android.helper
+package com.streamliners.lipu.android.helper
 
 import android.content.Context
 import android.speech.tts.TextToSpeech

@@ -1,4 +1,4 @@
-package com.streamliners.timify.feature.chat.comp
+package com.streamliners.lipu.feature.chat.comp
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -10,9 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.streamliners.timify.feature.chat.ChatViewModel
-import com.streamliners.timify.feature.chat.ChatViewModel.ChatHistoryUIItem.Role.Model
-import com.streamliners.timify.feature.chat.ChatViewModel.ChatHistoryUIItem.Role.User
+import com.streamliners.lipu.feature.chat.ChatViewModel
+import com.streamliners.lipu.feature.chat.ChatViewModel.ChatHistoryUIItem.Role.Model
+import com.streamliners.lipu.feature.chat.ChatViewModel.ChatHistoryUIItem.Role.User
 
 @Composable
 fun MessagesList(
