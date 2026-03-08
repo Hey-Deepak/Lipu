@@ -22,4 +22,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lipu"
 include(":app")
+include(":build-in-public")
  
