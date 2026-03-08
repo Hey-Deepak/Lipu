@@ -22,5 +22,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lipu"
 include(":app")
-include(":build-in-public")
+// :build-in-public is a standalone Kotlin JVM project with its own Gradle setup
+// Build it from: cd build-in-public && ../gradlew build
  
